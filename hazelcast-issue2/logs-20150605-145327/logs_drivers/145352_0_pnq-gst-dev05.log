@@ -1,0 +1,124 @@
+Jun 05, 2015 2:54:03 PM com.hazelcast.instance.DefaultAddressPicker
+INFO: [LOCAL] [dev] [3.4.2] Prefer IPv4 stack is true.
+Jun 05, 2015 2:54:03 PM com.hazelcast.instance.DefaultAddressPicker
+INFO: [LOCAL] [dev] [3.4.2] Picked Address[10.112.204.215]:57500, using socket ServerSocket[addr=/0.0.0.0,localport=57500], bind any local is true
+Jun 05, 2015 2:54:04 PM com.hazelcast.spi.OperationService
+INFO: [10.112.204.215]:57500 [dev] [3.4.2] Backpressure is disabled
+Jun 05, 2015 2:54:04 PM com.hazelcast.spi.impl.BasicOperationScheduler
+INFO: [10.112.204.215]:57500 [dev] [3.4.2] Starting with 8 generic operation threads and 16 partition operation threads.
+Jun 05, 2015 2:54:04 PM com.hazelcast.system
+INFO: [10.112.204.215]:57500 [dev] [3.4.2] Hazelcast 3.4.2 (20150326 - f6349a4) starting at Address[10.112.204.215]:57500
+Jun 05, 2015 2:54:04 PM com.hazelcast.system
+INFO: [10.112.204.215]:57500 [dev] [3.4.2] Copyright (C) 2008-2014 Hazelcast.com
+Jun 05, 2015 2:54:04 PM com.hazelcast.instance.Node
+INFO: [10.112.204.215]:57500 [dev] [3.4.2] Creating MulticastJoiner
+Jun 05, 2015 2:54:04 PM com.hazelcast.core.LifecycleService
+INFO: [10.112.204.215]:57500 [dev] [3.4.2] Address[10.112.204.215]:57500 is STARTING
+Jun 05, 2015 2:54:04 PM com.hazelcast.cluster.impl.MulticastJoiner
+INFO: [10.112.204.215]:57500 [dev] [3.4.2] Trying to join to discovered node: Address[10.112.204.212]:57500
+Jun 05, 2015 2:54:04 PM com.hazelcast.nio.tcp.SocketConnector
+INFO: [10.112.204.215]:57500 [dev] [3.4.2] Connecting to /10.112.204.212:57500, timeout: 0, bind-any: true
+Jun 05, 2015 2:54:04 PM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.112.204.215]:57500 [dev] [3.4.2] Established socket connection between /10.112.204.215:52420 and pnq-gst-dev02.pune.gemstone.com/10.112.204.212:57500
+Jun 05, 2015 2:54:10 PM com.hazelcast.nio.tcp.SocketAcceptor
+INFO: [10.112.204.215]:57500 [dev] [3.4.2] Accepting socket connection from /10.112.204.212:44330
+Jun 05, 2015 2:54:10 PM com.hazelcast.nio.tcp.SocketAcceptor
+INFO: [10.112.204.215]:57500 [dev] [3.4.2] Accepting socket connection from /10.112.204.211:52508
+Jun 05, 2015 2:54:10 PM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.112.204.215]:57500 [dev] [3.4.2] Established socket connection between /10.112.204.215:57500 and pnq-gst-dev02.pune.gemstone.com/10.112.204.212:44330
+Jun 05, 2015 2:54:10 PM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.112.204.215]:57500 [dev] [3.4.2] Established socket connection between /10.112.204.215:57500 and pnq-gst-dev01.pune.gemstone.com/10.112.204.211:52508
+Jun 05, 2015 2:54:11 PM com.hazelcast.cluster.ClusterService
+INFO: [10.112.204.215]:57500 [dev] [3.4.2] 
+
+Members [4] {
+	Member [10.112.204.212]:57500
+	Member [10.112.204.211]:57500
+	Member [10.112.204.212]:57501
+	Member [10.112.204.215]:57500 this
+}
+
+Jun 05, 2015 2:54:13 PM com.hazelcast.core.LifecycleService
+INFO: [10.112.204.215]:57500 [dev] [3.4.2] Address[10.112.204.215]:57500 is STARTED
+<14:54:13><yardstick> Hazelcast member started.
+<14:54:13><yardstick> Hazelcast config: [HazelcastBenchmarkArguments [nodes=3, backups=1, hzConfig='/export/rdiyewar1/mydev/benchmark/yardstick/yardstick-hazelcast/bin/../config/hazelcast-config.xml', hzClientCfg='config/hazelcast-client-config.xml', syncBackups=false, clientMode=false, range=1000000]].
+<14:54:13><yardstick> Hazelcast benchmark config: [BenchmarkConfiguration [driverNames='[HazelcastPutBenchmark]', serverName='HazelcastNode', threads=64, duration=30, warmup=6, dfltProbeClsNames=[ThroughputLatencyProbe, PercentileProbe, DStatProbe], propsFileName='config/benchmark.properties', packages=[org.yardstickframework], cmdArgs=[--outputFolder, results-20150605-145327, -hzcfg, /export/rdiyewar1/mydev/benchmark/yardstick/yardstick-hazelcast/bin/../config/hazelcast-config.xml, -nn, 3, -b, 1, -w, 6, -d, 30, -t, 64, --asyncBackups, --readBackups, -dn, HazelcastPutBenchmark, -sn, HazelcastNode, -ds, hz-3.4.2-atomic-put-1-backup, --config, config/benchmark.properties], probeWriter='null', customProps={BENCHMARK_PACKAGES=org.yardstickframework, DRIVER_HOSTS=pnq-gst-dev05, RESTART_SERVERS=true, CONFIGS="-hzcfg ${SCRIPT_DIR}/../config/hazelcast-config.xml -nn ${nodesNum} -b 1 -w 6 -d 30 -t 64 --asyncBackups --readBackups -dn HazelcastPutBenchmark -sn HazelcastNode -ds ${ver}atomic-put-1-backup"  , JVM_OPTS=${JVM_OPTS}" -Xloggc:./gc.log -XX:+PrintGCDetails -verbose:gc -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:+UseTLAB -XX:NewSize=128m -XX:MaxNewSize=128m -XX:MaxTenuringThreshold=0 -XX:SurvivorRatio=1024 -XX:+UseCMSInitiatingOccupancyOnly -XX:CMSInitiatingOccupancyFraction=60 ", nodesNum=$((`echo ${SERVER_HOSTS} | tr ',' '
+' | wc -l` + `echo ${DRIVER_HOSTS} | tr ',' '
+' | wc -l`)), ver="hz-3.4.2-", SERVER_HOSTS=pnq-gst-dev01,pnq-gst-dev02, BENCHMARK_LABEL=hazelcast}, shutdownHook=true, outputFolder=results-20150605-145327, outputWriter=java.io.PrintStream@489c34f, errorWriter=java.io.PrintStream@707579dc, descriptions=[hz-3.4.2-atomic-put-1-backup], hostName=]].
+<14:54:13><yardstick> Probe writer is not configured (using default CSV writer)
+<14:54:13><yardstick> DStatProbe is started. Command: 'dstat -m --all --noheaders --noupdate 1'
+<14:54:13><yardstick> PercentileProbe is started.
+<14:54:13><yardstick> ThroughputLatencyProbe is started.
+<14:54:20><yardstick> Starting main test (warmup finished).
+<14:54:21><yardstick> Starting iteration: 25000
+<14:54:21><yardstick> Starting iteration: 50000
+<14:54:21><yardstick> Starting iteration: 75000
+<14:54:21><yardstick> Starting iteration: 100000
+<14:54:21><yardstick> DStatProbe results will be saved to: results-20150605-145327
+<14:54:21><yardstick> ThroughputLatencyProbe results will be saved to: results-20150605-145327
+<14:54:22><yardstick> Starting iteration: 125000
+<14:54:22><yardstick> Starting iteration: 150000
+<14:54:22><yardstick> Starting iteration: 175000
+<14:54:22><yardstick> Starting iteration: 200000
+<14:54:23><yardstick> Starting iteration: 225000
+<14:54:23><yardstick> Starting iteration: 250000
+<14:54:23><yardstick> Starting iteration: 275000
+<14:54:23><yardstick> Starting iteration: 300000
+<14:54:23><yardstick> Starting iteration: 325000
+<14:54:24><yardstick> Starting iteration: 350000
+Finishing main test [ts=1433496264339, date=Fri Jun 05 14:54:24 IST 2015]
+Jun 05, 2015 2:54:24 PM com.hazelcast.spi.OperationService
+SEVERE: [10.112.204.215]:57500 [dev] [3.4.2] While processing response...
+com.hazelcast.core.HazelcastException: No invocation for response: NormalResponse{callId=737358, urgent=false, value=HeapData{type=-24, hashCode=801163982, partitionHash=801163982, dataSize=65, heapCost=93}, backupCount=0}
+	at com.hazelcast.spi.impl.BasicOperationService$ResponsePacketHandler.notifyRemoteCall(BasicOperationService.java:618)
+	at com.hazelcast.spi.impl.BasicOperationService$ResponsePacketHandler.handle(BasicOperationService.java:602)
+	at com.hazelcast.spi.impl.BasicOperationService$ResponsePacketHandler.access$1300(BasicOperationService.java:595)
+	at com.hazelcast.spi.impl.BasicOperationService$BasicDispatcherImpl.dispatch(BasicOperationService.java:580)
+	at com.hazelcast.spi.impl.BasicOperationScheduler$ResponseThread.process(BasicOperationScheduler.java:532)
+	at com.hazelcast.spi.impl.BasicOperationScheduler$ResponseThread.doRun(BasicOperationScheduler.java:524)
+	at com.hazelcast.spi.impl.BasicOperationScheduler$ResponseThread.run(BasicOperationScheduler.java:501)
+
+ERROR: Shutting down benchmark driver to unexpected exception.
+Type '--help' for usage.
+com.hazelcast.core.OperationTimeoutException: No response for 120000 ms. Aborting invocation! BasicInvocationFuture{invocation=BasicInvocation{ serviceName='hz:impl:mapService', op=PutOperation{map}, partitionId=210, replicaIndex=0, tryCount=250, tryPauseMillis=500, invokeCount=1, callTimeout=60000, target=Address[10.112.204.212]:57500, backupsExpected=0, backupsCompleted=0}, response=null, done=false} No response has been received!  backups-expected:0 backups-completed: 0
+	at com.hazelcast.spi.impl.BasicInvocationFuture.newOperationTimeoutException(BasicInvocationFuture.java:309)
+	at com.hazelcast.spi.impl.BasicInvocation.handleOperationTimeout(BasicInvocation.java:558)
+	at com.hazelcast.spi.impl.BasicPartitionInvocation.handleOperationTimeout(BasicPartitionInvocation.java:28)
+	at com.hazelcast.spi.impl.BasicOperationService$CleanupThread.scanHandleOperationTimeout(BasicOperationService.java:1135)
+	at com.hazelcast.spi.impl.BasicOperationService$CleanupThread.run(BasicOperationService.java:1102)
+	at ------ End remote and begin local stack-trace ------.(Unknown Source)
+	at com.hazelcast.spi.impl.BasicInvocationFuture.resolveApplicationResponse(BasicInvocationFuture.java:387)
+	at com.hazelcast.spi.impl.BasicInvocationFuture.resolveApplicationResponseOrThrowException(BasicInvocationFuture.java:320)
+	at com.hazelcast.spi.impl.BasicInvocationFuture.get(BasicInvocationFuture.java:194)
+	at com.hazelcast.spi.impl.BasicInvocationFuture.get(BasicInvocationFuture.java:173)
+	at com.hazelcast.map.impl.proxy.MapProxySupport.invokeOperation(MapProxySupport.java:416)
+	at com.hazelcast.map.impl.proxy.MapProxySupport.putInternal(MapProxySupport.java:365)
+	at com.hazelcast.map.impl.proxy.MapProxyImpl.put(MapProxyImpl.java:102)
+	at com.hazelcast.map.impl.proxy.MapProxyImpl.put(MapProxyImpl.java:89)
+	at org.yardstickframework.hazelcast.HazelcastPutBenchmark.test(HazelcastPutBenchmark.java:32)
+	at org.yardstickframework.impl.BenchmarkRunner$2.run(BenchmarkRunner.java:165)
+	at java.lang.Thread.run(Thread.java:745)
+Jun 05, 2015 2:54:24 PM com.hazelcast.core.LifecycleService
+INFO: [10.112.204.215]:57500 [dev] [3.4.2] Address[10.112.204.215]:57500 is SHUTTING_DOWN
+Jun 05, 2015 2:54:24 PM com.hazelcast.instance.Node
+INFO: [10.112.204.215]:57500 [dev] [3.4.2] Shutting down multicast service...
+Jun 05, 2015 2:54:24 PM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.112.204.215]:57500 [dev] [3.4.2] Connection [Address[10.112.204.212]:57500] lost. Reason: java.io.EOFException[Remote socket closed!]
+Jun 05, 2015 2:54:24 PM com.hazelcast.instance.Node
+INFO: [10.112.204.215]:57500 [dev] [3.4.2] Shutting down connection manager...
+Jun 05, 2015 2:54:24 PM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.112.204.215]:57500 [dev] [3.4.2] Connection [Address[10.112.204.211]:57500] lost. Reason: java.io.EOFException[Remote socket closed!]
+Jun 05, 2015 2:54:24 PM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.112.204.215]:57500 [dev] [3.4.2] Connection [Address[10.112.204.212]:57501] lost. Reason: java.io.EOFException[Remote socket closed!]
+Jun 05, 2015 2:54:24 PM com.hazelcast.instance.Node
+INFO: [10.112.204.215]:57500 [dev] [3.4.2] Shutting down node engine...
+Jun 05, 2015 2:54:25 PM com.hazelcast.instance.NodeExtension
+INFO: [10.112.204.215]:57500 [dev] [3.4.2] Destroying node NodeExtension.
+Jun 05, 2015 2:54:25 PM com.hazelcast.instance.Node
+INFO: [10.112.204.215]:57500 [dev] [3.4.2] Hazelcast Shutdown is completed in 900 ms.
+Jun 05, 2015 2:54:25 PM com.hazelcast.core.LifecycleService
+INFO: [10.112.204.215]:57500 [dev] [3.4.2] Address[10.112.204.215]:57500 is SHUTDOWN
+<14:54:25><yardstick> PercentileProbe results will be saved to: results-20150605-145327
+<14:54:25><yardstick> DStatProbe is stopped.
+<14:54:25><yardstick> PercentileProbe is stopped.
+<14:54:25><yardstick> ThroughputLatencyProbe is stopped.

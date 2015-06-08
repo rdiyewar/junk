@@ -1,0 +1,78 @@
+Jun 05, 2015 2:18:10 PM com.hazelcast.instance.DefaultAddressPicker
+INFO: [LOCAL] [dev] [3.4.2] Prefer IPv4 stack is true.
+Jun 05, 2015 2:18:10 PM com.hazelcast.instance.DefaultAddressPicker
+INFO: [LOCAL] [dev] [3.4.2] Picked Address[10.112.204.211]:57500, using socket ServerSocket[addr=/0.0.0.0,localport=57500], bind any local is true
+Jun 05, 2015 2:18:11 PM com.hazelcast.spi.OperationService
+INFO: [10.112.204.211]:57500 [dev] [3.4.2] Backpressure is disabled
+Jun 05, 2015 2:18:11 PM com.hazelcast.spi.impl.BasicOperationScheduler
+INFO: [10.112.204.211]:57500 [dev] [3.4.2] Starting with 8 generic operation threads and 16 partition operation threads.
+Jun 05, 2015 2:18:11 PM com.hazelcast.system
+INFO: [10.112.204.211]:57500 [dev] [3.4.2] Hazelcast 3.4.2 (20150326 - f6349a4) starting at Address[10.112.204.211]:57500
+Jun 05, 2015 2:18:11 PM com.hazelcast.system
+INFO: [10.112.204.211]:57500 [dev] [3.4.2] Copyright (C) 2008-2014 Hazelcast.com
+Jun 05, 2015 2:18:11 PM com.hazelcast.instance.Node
+INFO: [10.112.204.211]:57500 [dev] [3.4.2] Creating MulticastJoiner
+Jun 05, 2015 2:18:11 PM com.hazelcast.core.LifecycleService
+INFO: [10.112.204.211]:57500 [dev] [3.4.2] Address[10.112.204.211]:57500 is STARTING
+Jun 05, 2015 2:18:11 PM com.hazelcast.cluster.impl.MulticastJoiner
+INFO: [10.112.204.211]:57500 [dev] [3.4.2] Trying to join to discovered node: Address[10.112.204.212]:57500
+Jun 05, 2015 2:18:11 PM com.hazelcast.nio.tcp.SocketConnector
+INFO: [10.112.204.211]:57500 [dev] [3.4.2] Connecting to /10.112.204.212:57500, timeout: 0, bind-any: true
+Jun 05, 2015 2:18:11 PM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.112.204.211]:57500 [dev] [3.4.2] Established socket connection between /10.112.204.211:57997 and pnq-gst-dev02.pune.gemstone.com/10.112.204.212:57500
+Jun 05, 2015 2:18:17 PM com.hazelcast.cluster.ClusterService
+INFO: [10.112.204.211]:57500 [dev] [3.4.2] 
+
+Members [2] {
+	Member [10.112.204.212]:57500
+	Member [10.112.204.211]:57500 this
+}
+
+Jun 05, 2015 2:18:19 PM com.hazelcast.core.LifecycleService
+INFO: [10.112.204.211]:57500 [dev] [3.4.2] Address[10.112.204.211]:57500 is STARTED
+<14:18:19><yardstick> Hazelcast member started.
+<14:18:19><yardstick> Hazelcast config: [HazelcastBenchmarkArguments [nodes=3, backups=1, hzConfig='/export/rdiyewar1/mydev/benchmark/yardstick/yardstick-hazelcast/bin/../config/hazelcast-config.xml', hzClientCfg='config/hazelcast-client-config.xml', syncBackups=false, clientMode=false, range=1000000]].
+<14:18:19><yardstick> Hazelcast benchmark config: [BenchmarkConfiguration [driverNames='[HazelcastPutBenchmark]', serverName='HazelcastNode', threads=64, duration=30, warmup=6, dfltProbeClsNames=[ThroughputLatencyProbe, PercentileProbe, DStatProbe], propsFileName='config/benchmark.properties', packages=[org.yardstickframework], cmdArgs=[-hzcfg, /export/rdiyewar1/mydev/benchmark/yardstick/yardstick-hazelcast/bin/../config/hazelcast-config.xml, -nn, 3, -b, 1, -w, 6, -d, 30, -t, 64, --asyncBackups, --readBackups, -dn, HazelcastPutBenchmark, -sn, HazelcastNode, -ds, hz-3.4.2-atomic-put-1-backup, --config, config/benchmark.properties], probeWriter='null', customProps={BENCHMARK_PACKAGES=org.yardstickframework, DRIVER_HOSTS=pnq-gst-dev05, RESTART_SERVERS=true, CONFIGS="-hzcfg ${SCRIPT_DIR}/../config/hazelcast-config.xml -nn ${nodesNum} -b 1 -w 6 -d 30 -t 64 --asyncBackups --readBackups -dn HazelcastPutBenchmark -sn HazelcastNode -ds ${ver}atomic-put-1-backup"  , JVM_OPTS=${JVM_OPTS}" -Xloggc:./gc.log -XX:+PrintGCDetails -verbose:gc -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:+UseTLAB -XX:NewSize=128m -XX:MaxNewSize=128m -XX:MaxTenuringThreshold=0 -XX:SurvivorRatio=1024 -XX:+UseCMSInitiatingOccupancyOnly -XX:CMSInitiatingOccupancyFraction=60 ", nodesNum=$((`echo ${SERVER_HOSTS} | tr ',' '
+' | wc -l` + `echo ${DRIVER_HOSTS} | tr ',' '
+' | wc -l`)), ver="hz-3.4.2-", SERVER_HOSTS=pnq-gst-dev01,pnq-gst-dev02, BENCHMARK_LABEL=hazelcast}, shutdownHook=true, outputFolder=null, outputWriter=java.io.PrintStream@46ddaf79, errorWriter=java.io.PrintStream@42b5548, descriptions=[hz-3.4.2-atomic-put-1-backup], hostName=]].
+Jun 05, 2015 2:18:28 PM com.hazelcast.cluster.ClusterService
+INFO: [10.112.204.211]:57500 [dev] [3.4.2] 
+
+Members [3] {
+	Member [10.112.204.212]:57500
+	Member [10.112.204.211]:57500 this
+	Member [10.112.204.212]:57501
+}
+
+Jun 05, 2015 2:18:28 PM com.hazelcast.nio.tcp.SocketConnector
+INFO: [10.112.204.211]:57500 [dev] [3.4.2] Connecting to /10.112.204.212:57501, timeout: 0, bind-any: true
+Jun 05, 2015 2:18:28 PM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.112.204.211]:57500 [dev] [3.4.2] Established socket connection between /10.112.204.211:37323 and pnq-gst-dev02.pune.gemstone.com/10.112.204.212:57501
+Jun 05, 2015 2:18:41 PM com.hazelcast.cluster.ClusterService
+INFO: [10.112.204.211]:57500 [dev] [3.4.2] 
+
+Members [4] {
+	Member [10.112.204.212]:57500
+	Member [10.112.204.211]:57500 this
+	Member [10.112.204.212]:57501
+	Member [10.112.204.215]:57500
+}
+
+Jun 05, 2015 2:18:41 PM com.hazelcast.nio.tcp.SocketConnector
+INFO: [10.112.204.211]:57500 [dev] [3.4.2] Connecting to /10.112.204.215:57500, timeout: 0, bind-any: true
+Jun 05, 2015 2:18:41 PM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.112.204.211]:57500 [dev] [3.4.2] Established socket connection between /10.112.204.211:52508 and pnq-gst-dev05.pune.gemstone.com/10.112.204.215:57500
+Jun 05, 2015 2:18:55 PM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.112.204.211]:57500 [dev] [3.4.2] Connection [Address[10.112.204.215]:57500] lost. Reason: Socket explicitly closed
+Jun 05, 2015 2:18:55 PM com.hazelcast.cluster.ClusterService
+INFO: [10.112.204.211]:57500 [dev] [3.4.2] Removing Member [10.112.204.215]:57500
+Jun 05, 2015 2:18:55 PM com.hazelcast.cluster.ClusterService
+INFO: [10.112.204.211]:57500 [dev] [3.4.2] 
+
+Members [3] {
+	Member [10.112.204.212]:57500
+	Member [10.112.204.211]:57500 this
+	Member [10.112.204.212]:57501
+}
+
+/export/rdiyewar1/mydev/benchmark/yardstick/yardstick-hazelcast/bin/benchmark-bootstrap.sh: line 107:  2116 Killed                  "$JAVA" ${JVM_OPTS} -cp ${CP} ${MAIN_CLASS} ${ARGS}
